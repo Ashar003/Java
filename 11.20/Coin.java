@@ -1,0 +1,36 @@
+
+// public abstract class Coin extends Money {
+//    private int value;
+   
+//    public Coin(int v) {
+//       value = v;
+//    }
+//    public int getValue () {
+//       return value;
+//    }
+//    public String toString() {
+//       return ("$ 0."+getValue());
+//    }
+// }
+
+public abstract class Coin extends Money {
+	private int value;
+
+	public Coin(int v) {
+		value = v;
+	}
+	
+	// combination of (default) + 
+	// subclasses can access outside of pkg
+	protected int getValue() {
+		return value;
+	}
+
+	public String toString() {
+		if (value < 10)
+			return "$ 0.0" + value;
+		
+		return ("$ 0." + getValue());
+		
+	}
+}

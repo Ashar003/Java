@@ -1,0 +1,4 @@
+public class Distance{
+    private static int INCHES_IN_A_FOOT = 12;
+    private static float FEET_IN_A_METER = 0.3048f;
+}
